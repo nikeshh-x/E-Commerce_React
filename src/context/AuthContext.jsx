@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext(null);
 
 export default function AuthProvider({ children }) {
@@ -32,7 +33,7 @@ export default function AuthProvider({ children }) {
       return { success: false, error: "Invalid email or Password" };
     }
     localStorage.setItem("currentUser", email);
-    setUser(email);
+    setUser(user);
     return { success: true };
   }
 
